@@ -103,6 +103,18 @@ public:
         cout << "nullptr" << endl;
     }
 
+    // 删除链表
+    void deleteList(LinkNode* head)
+    {
+        while (head != nullptr)
+        {
+            LinkNode* temp = head;
+            head = head->next;
+            cout << "删除 " << temp->val << endl;
+            delete temp;
+        }
+    }
+
 private:
 
 };
@@ -117,10 +129,12 @@ KLinkSolution ::~KLinkSolution()
 
 int main()
 {
+    // 测试代码
     KLinkSolution* solution = new KLinkSolution();
     int array[] = {1,2,3,4,5,6,7};
     LinkNode*  head = solution->createList(array, sizeof(array) / sizeof(array[0]));
     solution->printList(head);
     head = solution->reverseKGroup(head, 3);
     solution->printList(head);
+    solution->deleteList(head);
 }

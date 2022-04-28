@@ -33,6 +33,13 @@ public:
 
     LinkNode* reverseKGroup(LinkNode* head, int k) 
     {
+        // 修复k值异常情况
+        // k 如果大于链表长度无需处理，默认不会处理
+        if (k < 0) 
+        {
+            cout << "K值一场==异常" << endl;
+            return head;
+        }
         // 该指针变量用作缓存
         LinkNode* temp = head;
         int sum = 0;

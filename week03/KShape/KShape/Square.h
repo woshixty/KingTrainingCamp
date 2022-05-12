@@ -9,7 +9,6 @@ private:
 public:
     Square();
 
-    // 使用工厂模式创建对象时判断边是否为负数
     Square(double s);
 
     Square(Shape* shape);

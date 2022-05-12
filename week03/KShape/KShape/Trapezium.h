@@ -10,7 +10,6 @@ private:
 public:
     Trapezium();
 
-    // 使用工厂模式创建对象时判断边是否正常
     Trapezium(double t, double b, double l, double r);
 
     Trapezium(Shape* shape);

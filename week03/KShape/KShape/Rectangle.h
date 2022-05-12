@@ -9,7 +9,6 @@ private:
 public:
     Rectangle();
 
-    // 使用工厂模式创建对象时判断边是否正常
     Rectangle(double l, double w);
 
     Rectangle(Shape* shape);

@@ -12,7 +12,6 @@ private:
 public:
     Round();
 
-    // 使用工厂模式创建对象时判断边是否为负数
     Round(double r);
 
     Round(Shape* shape);

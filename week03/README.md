@@ -1,4 +1,4 @@
-### 一、week01
+### 一、week03
 
 #### 1、问题
 
@@ -92,6 +92,8 @@ enum ShapeType {
     triangle, square, rectangle, trapezium, circle, compoundshape
 };
 ```
+
+复合形状使用类成员`vector<Shape*> shapes`来组合其他形状派生类
 
 #### 3、设计模式
 

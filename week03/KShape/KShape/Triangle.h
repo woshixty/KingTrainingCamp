@@ -1,3 +1,10 @@
+// ------------------------------------------------------- 
+// Triangle.h 
+// 创建者： xty
+// 创建时间： 2022/5/11 
+// 功能描述： 三角形
+// Copyright 2022 Kingsoft 
+// --------------------------------------------------------
 #ifndef CPPDESIGNPATTERNS_TRIANGLE_H
 #define CPPDESIGNPATTERNS_TRIANGLE_H
 

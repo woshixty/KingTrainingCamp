@@ -1,3 +1,10 @@
+// ------------------------------------------------------- 
+// ShapeFactory.h 
+// 创建者： xty
+// 创建时间： 2022/5/11 
+// 功能描述： Shape构造工厂类
+// Copyright 2022 Kingsoft 
+// --------------------------------------------------------
 #ifndef CPPDESIGNPATTERNS_SHAPEFACTORY_H
 #define CPPDESIGNPATTERNS_SHAPEFACTORY_H
 

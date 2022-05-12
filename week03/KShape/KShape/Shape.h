@@ -1,3 +1,10 @@
+// ------------------------------------------------------- 
+// Shape.h 
+// 创建者： xty
+// 创建时间： 2022/5/11 
+// 功能描述： 抽象基类
+// Copyright 2022 Kingsoft 
+// --------------------------------------------------------
 #ifndef CPPDESIGNPATTERNS_SHAPE_H
 #define CPPDESIGNPATTERNS_SHAPE_H
 

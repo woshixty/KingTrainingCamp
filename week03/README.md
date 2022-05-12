@@ -23,6 +23,8 @@
 
 #### 2、设计
 
+类之间的结构
+
 ```mermaid
 classDiagram
     class Shape
@@ -45,12 +47,58 @@ classDiagram
     Round : area()
     Round : type()
     Shape <|-- Round
+    
+    class Square
+    Square : side
+    Square : perimeter()
+    Square : area()
+    Square : type()
+    Shape <|-- Square
+    
+    class Triangle
+    Triangle : a
+    Triangle : b
+    Triangle : c
+    Triangle : perimeter()
+    Triangle : area()
+    Triangle : type()
+    Shape <|-- Triangle
+    
+    class Trapezium
+    Trapezium : top
+    Trapezium : bottom
+    Trapezium : left
+    Trapezium : right
+    Trapezium : perimeter()
+    Trapezium : area()
+    Trapezium : type()
+    Shape <|-- Trapezium
+    
+    class Compoundshape
+    Compoundshape : vector<Shape*> shapes
+    Compoundshape : perimeter()
+    Compoundshape : area()
+    Compoundshape : type()
+    Compoundshape : addShape(Shape* shape)
+    Shape <|-- Compoundshape
 ```
 
 
 
+各种图形的type使用枚举来标识
+
+```c++
+enum ShapeType {
+    triangle, square, rectangle, trapezium, circle, compoundshape
+};
+```
+
 #### 3、设计模式
 
-由于Compoundshape由其他的形状组合而成，构造时参数可变，故选择Builder模式来构造
+- Builder模式
 
-其余Shape派生类使用Factory模式来构建，参数在Factory中校验，例如构造三角形时判断三边能否构建一个三角形
+  Compoundshape由其他的形状组合而成，构造时参数可变，故选择Builder模式来构造
+
+- Factory模式
+
+  其余Shape派生类使用Factory模式来构建，参数在Factory中校验，例如构造三角形时判断三边能否构建一个三角形

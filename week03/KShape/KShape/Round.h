@@ -1,3 +1,10 @@
+// ------------------------------------------------------- 
+// Round.h 
+// 创建者： xty
+// 创建时间： 2022/5/11 
+// 功能描述： 圆形
+// Copyright 2022 Kingsoft 
+// --------------------------------------------------------
 #ifndef CPPDESIGNPATTERNS_ROUND_H
 #define CPPDESIGNPATTERNS_ROUND_H
 

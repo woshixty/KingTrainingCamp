@@ -11,7 +11,8 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     ShapeFactory shapeFactory;
 
     cout << "Rectangle" << endl;

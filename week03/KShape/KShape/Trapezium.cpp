@@ -8,7 +8,8 @@ Trapezium::Trapezium() : top(0.0), bottom(0.0), left(0.0), right(0.0) {}
 
 Trapezium::Trapezium(double t, double b, double l, double r) : top(t), bottom(b), left(l), right(r) {}
 
-Trapezium::Trapezium(Shape* shape) {
+Trapezium::Trapezium(Shape* shape) 
+{
     if (shape != nullptr && shape->type() == trapezium) 
     {
         Trapezium* p = dynamic_cast<Trapezium*>(shape);
@@ -29,13 +30,16 @@ Trapezium::Trapezium(Shape* shape) {
 
 Trapezium::~Trapezium() {}
 
-double Trapezium::perimeter() const {
+double Trapezium::perimeter() const 
+{
     return top + bottom + left + right;
 }
 
-double Trapezium::area() const {
+double Trapezium::area() const 
+{
     double x = abs(top - bottom);
-    if (x == 0) {
+    if (x == 0) 
+    {
         // 为平行四边形
         return 0.0;
     }
@@ -44,6 +48,7 @@ double Trapezium::area() const {
     return (top + bottom) * s / x;
 }
 
-ShapeType Trapezium::type() const {
+ShapeType Trapezium::type() const 
+{
     return trapezium;
 }

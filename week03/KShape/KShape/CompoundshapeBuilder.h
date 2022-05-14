@@ -13,7 +13,8 @@
 
 using namespace std;
 
-class CompoundshapeBuilder {
+class CompoundshapeBuilder 
+{
 public:
     CompoundshapeBuilder();
 

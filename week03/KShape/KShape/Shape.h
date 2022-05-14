@@ -8,11 +8,13 @@
 #ifndef CPPDESIGNPATTERNS_SHAPE_H
 #define CPPDESIGNPATTERNS_SHAPE_H
 
-enum ShapeType {
+enum ShapeType 
+{
     triangle, square, rectangle, trapezium, circle, compoundshape
 };
 
-class Shape {
+class Shape 
+{
 public:
     virtual double perimeter() const = 0;
 

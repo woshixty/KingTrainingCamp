@@ -13,7 +13,8 @@
 
 #define PI acos(-1)
 
-class Round : public Shape {
+class Round : public Shape 
+{
 private:
     double radius;
 public:

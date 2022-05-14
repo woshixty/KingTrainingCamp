@@ -7,12 +7,15 @@ Square::Square() : side(0.0) {}
 
 Square::Square(double s) : side(s) {}
 
-Square::Square(Shape* shape) {
-    if (shape != nullptr && shape->type() == square) {
+Square::Square(Shape* shape) 
+{
+    if (shape != nullptr && shape->type() == square) 
+    {
         Square* p = dynamic_cast<Square*>(shape);
         side = p->side;
     }
-    else {
+    else 
+    {
         side = 0.0;
         cout << "类型不可用于构造Square" << endl;
     }
@@ -20,14 +23,17 @@ Square::Square(Shape* shape) {
 
 Square::~Square() {}
 
-double Square::perimeter() const {
+double Square::perimeter() const 
+{
     return 4 * side;
 }
 
-double Square::area() const {
+double Square::area() const 
+{
     return side * side;
 }
 
-ShapeType Square::type() const {
+ShapeType Square::type() const 
+{
     return square;
 }

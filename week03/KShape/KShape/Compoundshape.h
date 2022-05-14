@@ -16,7 +16,8 @@
 #include "Square.h"
 #include <vector>
 
-class Compoundshape : public Shape {
+class Compoundshape : public Shape 
+{
 private:
     std::vector<Shape*> shapes;
 public:
@@ -30,12 +31,15 @@ public:
 
     ShapeType type() const override;
 
-    static Shape* copyShape(Shape* shape) {
-        if (shape == nullptr) {
+    static Shape* copyShape(Shape* shape) 
+    {
+        if (shape == nullptr) 
+        {
             return nullptr;
         }
         Shape* point;
-        switch (shape->type()) {
+        switch (shape->type()) 
+        {
         case rectangle:
             point = new Rectangle(shape);
             break;

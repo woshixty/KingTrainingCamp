@@ -7,12 +7,15 @@ Round::Round() : radius(0.0) {}
 
 Round::Round(double r) : radius(r) {}
 
-Round::Round(Shape* shape) {
-    if (shape != nullptr && shape->type() == circle) {
+Round::Round(Shape* shape) 
+{
+    if (shape != nullptr && shape->type() == circle) 
+    {
         Round* p = dynamic_cast<Round*>(shape);
         radius = p->radius;
     }
-    else {
+    else 
+    {
         radius = 0.0;
         cout << "类型不可用于构造Round" << endl;
     }
@@ -20,14 +23,17 @@ Round::Round(Shape* shape) {
 
 Round::~Round() {}
 
-double Round::perimeter() const {
+double Round::perimeter() const 
+{
     return 2 * radius * PI;
 }
 
-double Round::area() const {
+double Round::area() const 
+{
     return PI * radius * radius;
 }
 
-ShapeType Round::type() const {
+ShapeType Round::type() const 
+{
     return circle;
 }

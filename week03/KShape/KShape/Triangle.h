@@ -10,7 +10,8 @@
 
 #include "Shape.h"
 
-class Triangle : public Shape {
+class Triangle : public Shape 
+{
 private:
     double sideA, sideB, sideC;
 public:

@@ -10,7 +10,8 @@
 
 #include "Shape.h"
 
-class Rectangle : public Shape {
+class Rectangle : public Shape 
+{
 private:
     double length, width;
 public:

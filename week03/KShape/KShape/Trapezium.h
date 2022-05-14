@@ -11,7 +11,8 @@
 
 #include "Shape.h"
 
-class Trapezium : public Shape {
+class Trapezium : public Shape 
+{
 private:
     double top, bottom, left, right;
 public:

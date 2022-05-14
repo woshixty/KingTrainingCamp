@@ -14,7 +14,8 @@
 #include "Round.h"
 #include "Square.h"
 
-class ShapeFactory {
+class ShapeFactory 
+{
 public:
     Triangle* getTriangle(double a, double b, double c);
 

@@ -23,12 +23,12 @@ public:
     iterator begin();
     iterator end();
 
-    KMatrixVector() : KMatrix<T>::m_row(0),
-        KMatrix<T>::m_column(0) {}
+    KMatrixVector();
     KMatrixVector(size_t row, size_t column, T data = 0);
-    KMatrixVector(KMatrixVector const& other);
+    KMatrixVector(KMatrixVector const &other);
     // 使用数组构造矩阵
-    KMatrixVector(size_t row, size_t column, T* src);
+    KMatrixVector(size_t row, size_t column, T *src);
+    KMatrixVector(size_t row, size_t column, matrix const &src);
     ~KMatrixVector() { m_matrix.clear(); }
 
     void setData(size_t row, size_t col, T value) override;
@@ -38,6 +38,7 @@ public:
 
     void eraseRow(size_t row) override;
     void eraseColumns(size_t col) override;
+    void clear(size_t row, size_t col) override;
 
     KMatrix<T>* getRightPointer(size_t row, size_t col) const override;
 
@@ -65,8 +66,15 @@ KMatrixIterator<T> KMatrixVector<T>::end()
 }
 
 template<typename T>
+inline KMatrixVector<T>::KMatrixVector() : KMatrix<T>::m_row(0), KMatrix<T>::m_column(0)
+{
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
+}
+
+template<typename T>
 KMatrixVector<T>::KMatrixVector(size_t row, size_t column, T data)
 {
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
     KMatrix<T>::m_row = row;
     KMatrix<T>::m_column = column;
     for (int i = 0; i < KMatrix<T>::m_row; ++i)
@@ -78,6 +86,7 @@ KMatrixVector<T>::KMatrixVector(size_t row, size_t column, T data)
 template<typename T>
 KMatrixVector<T>::KMatrixVector(const KMatrixVector& other) : m_matrix(other.m_matrix)
 {
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
     KMatrix<T>::m_row = other.m_row;
     KMatrix<T>::m_column = other.m_column;
 }
@@ -85,12 +94,25 @@ KMatrixVector<T>::KMatrixVector(const KMatrixVector& other) : m_matrix(other.m_m
 template<typename T>
 KMatrixVector<T>::KMatrixVector(size_t row, size_t column, T* src)
 {
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
+    KMatrix<T>::m_row = row;
+    KMatrix<T>::m_column = column;
     size_t base = 0;
-    for (size_t i = 0; i < row; ++i) {
+    for (size_t i = 0; i < row; ++i) 
+    {
         // 将第i行数据拷贝进去
         m_matrix.push_back(std::vector<T>(&src[base], &src[base + column]));
         base += column;
     }
+}
+
+template<typename T>
+inline KMatrixVector<T>::KMatrixVector(size_t row, size_t column, matrix const& src)
+{
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
+    KMatrix<T>::m_row = row;
+    KMatrix<T>::m_column = column;
+    m_matrix = src;
 }
 
 template<typename T>
@@ -141,6 +163,17 @@ void KMatrixVector<T>::eraseColumns(size_t col)
 }
 
 template<typename T>
+inline void KMatrixVector<T>::clear(size_t row, size_t col)
+{
+    m_matrix.clear();
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < col; ++j) {
+            m_matrix.push_back(std::vector<T>(col, 0));
+        }
+    }
+}
+
+template<typename T>
 KMatrix<T>* KMatrixVector<T>::getRightPointer(size_t row, size_t col) const
 {
     return new KMatrixVector<T>(row, col);
@@ -176,7 +209,8 @@ KMatrixVector<T> KMatrixVector<T>::operator*(const KMatrixVector<T>& other)
 }
 
 template<typename T>
-bool KMatrixVector<T>::operator==(KMatrixVector<T>& other) {
+bool KMatrixVector<T>::operator==(KMatrixVector<T>& other) 
+{
     return KMatrix<T>::sameMatrix(other);
 }
 

@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KMatrix", "KMatrix\KMatrix.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KTestMatrixMap", "KTestMatrixMap\KTestMatrixMap.vcxproj", "{6834550C-0CFD-46A4-8321-92BC2A5297CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KTestMatrixVector", "KTestMatrixVector\KTestMatrixVector.vcxproj", "{B6B65F5A-6848-48CB-904D-CD69F27E483B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{6834550C-0CFD-46A4-8321-92BC2A5297CD}.Release|x64.Build.0 = Release|x64
 		{6834550C-0CFD-46A4-8321-92BC2A5297CD}.Release|x86.ActiveCfg = Release|Win32
 		{6834550C-0CFD-46A4-8321-92BC2A5297CD}.Release|x86.Build.0 = Release|Win32
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Debug|x64.ActiveCfg = Debug|x64
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Debug|x64.Build.0 = Debug|x64
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Debug|x86.Build.0 = Debug|Win32
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Release|x64.ActiveCfg = Release|x64
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Release|x64.Build.0 = Release|x64
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Release|x86.ActiveCfg = Release|Win32
+		{B6B65F5A-6848-48CB-904D-CD69F27E483B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

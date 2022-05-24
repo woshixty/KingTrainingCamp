@@ -15,24 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="kTest.cpp">
+    <ClCompile Include="KTestMatrixVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="kMatrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="kMatrixIterator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="kMatrixVector.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="kMatrixMap.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="kMatrixBuilder.h">
+    <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,24 +8,24 @@
 #ifndef CPPDESIGNPATTERNS_COMPOUNDSHAPEBUILDER_H
 #define CPPDESIGNPATTERNS_COMPOUNDSHAPEBUILDER_H
 
-#include "Shape.h"
+#include "kShape.h"
 #include <vector>
 
 using namespace std;
 
-class CompoundshapeBuilder 
+class KCompoundshapeBuilder 
 {
 public:
-    CompoundshapeBuilder();
+    KCompoundshapeBuilder();
 
-    ~CompoundshapeBuilder();
+    ~KCompoundshapeBuilder();
 
-    CompoundshapeBuilder* build(Shape* buildPara);
+    KCompoundshapeBuilder* build(KShape* buildPara);
 
-    Shape* getShape();
+    KShape* getShape();
 
 private:
-    vector<Shape*> shapes;
+    vector<KShape*> m_shapes;
 };
 
 

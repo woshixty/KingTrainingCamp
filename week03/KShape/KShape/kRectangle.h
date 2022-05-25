@@ -8,20 +8,20 @@
 #ifndef CPPDESIGNPATTERNS_RECTANGLE_H
 #define CPPDESIGNPATTERNS_RECTANGLE_H
 
-#include "Shape.h"
+#include "kShape.h"
 
-class Rectangle : public Shape 
+class KRectangle : public KShape 
 {
 private:
-    double length, width;
+    double m_length, m_width;
 public:
-    Rectangle();
+    KRectangle();
 
-    Rectangle(double l, double w);
+    KRectangle(double l, double w);
 
-    Rectangle(Shape* shape);
+    KRectangle(KShape* shape);
 
-    ~Rectangle();
+    ~KRectangle();
 
     double perimeter() const override;
 

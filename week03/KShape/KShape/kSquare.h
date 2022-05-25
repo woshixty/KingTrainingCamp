@@ -1,30 +1,27 @@
 // ------------------------------------------------------- 
-// Round.h 
+// Square.h 
 // 创建者： xty
 // 创建时间： 2022/5/11 
-// 功能描述： 圆形
+// 功能描述： 正方形
 // Copyright 2022 Kingsoft 
 // --------------------------------------------------------
-#ifndef CPPDESIGNPATTERNS_ROUND_H
-#define CPPDESIGNPATTERNS_ROUND_H
+#ifndef CPPDESIGNPATTERNS_SQUARE_H
+#define CPPDESIGNPATTERNS_SQUARE_H
 
-#include "Shape.h"
-#include <math.h>
+#include "kShape.h"
 
-#define PI acos(-1)
-
-class Round : public Shape 
+class KSquare : public KShape 
 {
 private:
-    double radius;
+    double m_side;
 public:
-    Round();
+    KSquare();
 
-    Round(double r);
+    KSquare(double s);
 
-    Round(Shape* shape);
+    KSquare(KShape* shape);
 
-    ~Round();
+    ~KSquare();
 
     double perimeter() const override;
 
@@ -34,4 +31,4 @@ public:
 };
 
 
-#endif //CPPDESIGNPATTERNS_ROUND_H
+#endif //CPPDESIGNPATTERNS_SQUARE_H

@@ -9,20 +9,20 @@
 #define CPPDESIGNPATTERNS_TRAPEZIUM_H
 
 
-#include "Shape.h"
+#include "kShape.h"
 
-class Trapezium : public Shape 
+class KTrapezium : public KShape 
 {
 private:
-    double top, bottom, left, right;
+    double m_top, m_bottom, m_left, m_right;
 public:
-    Trapezium();
+    KTrapezium();
 
-    Trapezium(double t, double b, double l, double r);
+    KTrapezium(double t, double b, double l, double r);
 
-    Trapezium(Shape* shape);
+    KTrapezium(KShape* shape);
 
-    ~Trapezium();
+    ~KTrapezium();
 
     double perimeter() const override;
 

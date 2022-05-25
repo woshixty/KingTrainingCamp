@@ -8,20 +8,20 @@
 #ifndef CPPDESIGNPATTERNS_TRIANGLE_H
 #define CPPDESIGNPATTERNS_TRIANGLE_H
 
-#include "Shape.h"
+#include "kShape.h"
 
-class Triangle : public Shape 
+class KTriangle : public KShape 
 {
 private:
-    double sideA, sideB, sideC;
+    double m_side_a, m_side_b, m_side_c;
 public:
-    Triangle();
+    KTriangle();
 
-    Triangle(double a, double b, double c);
+    KTriangle(double a, double b, double c);
 
-    Triangle(Shape* shape);
+    KTriangle(KShape* shape);
 
-    ~Triangle();
+    ~KTriangle();
 
     void setSides(double a, double b, double c);
 

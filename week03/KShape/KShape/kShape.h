@@ -13,7 +13,7 @@ enum ShapeType
     triangle, square, rectangle, trapezium, circle, compoundshape
 };
 
-class Shape 
+class KShape 
 {
 public:
     virtual double perimeter() const = 0;

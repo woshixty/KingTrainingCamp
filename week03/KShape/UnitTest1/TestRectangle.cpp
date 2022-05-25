@@ -7,9 +7,9 @@
 // --------------------------------------------------------
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../KShape/Shape.h"
-#include "../KShape/Rectangle.h"
-#include "../KShape/ShapeFactory.h"
+#include "../KShape/kShape.h"
+#include "../KShape/kRectangle.h"
+#include "../KShape/kShapeFactory.h"
 #include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -21,17 +21,17 @@ namespace TestRectangle
 	public:
 		TEST_METHOD(TestArea)
 		{
-			ShapeFactory shapeFactory;
+			KShapeFactory shapeFactory;
 			double l = 4, w = 7;
-			Shape* s = shapeFactory.getRectangle(l, w);
+			KShape* s = shapeFactory.getRectangle(l, w);
 			double area = s->area();
 			Assert::AreEqual(l * w, area);
 		}
 		TEST_METHOD(TestPerimeter)
 		{
-			ShapeFactory shapeFactory;
+			KShapeFactory shapeFactory;
 			double l = 4, w = 7;
-			Shape* s = shapeFactory.getRectangle(l, w);
+			KShape* s = shapeFactory.getRectangle(l, w);
 			double perimeter = s->perimeter();
 			Assert::AreEqual(2 * (l + w), perimeter);
 		}

@@ -8,24 +8,24 @@
 #ifndef CPPDESIGNPATTERNS_SHAPEFACTORY_H
 #define CPPDESIGNPATTERNS_SHAPEFACTORY_H
 
-#include "Rectangle.h"
-#include "Triangle.h"
-#include "Trapezium.h"
-#include "Round.h"
-#include "Square.h"
+#include "kRectangle.h"
+#include "kTriangle.h"
+#include "kTrapezium.h"
+#include "kRound.h"
+#include "kSquare.h"
 
-class ShapeFactory 
+class KShapeFactory 
 {
 public:
-    Triangle* getTriangle(double a, double b, double c);
+    KTriangle* getTriangle(double a, double b, double c);
 
-    Square* getSquare(double side);
+    KSquare* getSquare(double side);
 
-    Rectangle* getRectangle(double l, double w);
+    KRectangle* getRectangle(double l, double w);
 
-    Trapezium* getTrapezium(double t, double b, double l, double r);
+    KTrapezium* getTrapezium(double t, double b, double l, double r);
 
-    Round* getRound(double r);
+    KRound* getRound(double r);
 };
 
 

@@ -19,26 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Compoundshape.h" />
-    <ClInclude Include="CompoundshapeBuilder.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="Round.h" />
-    <ClInclude Include="Shape.h" />
-    <ClInclude Include="ShapeFactory.h" />
-    <ClInclude Include="Square.h" />
-    <ClInclude Include="Trapezium.h" />
-    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="kCompoundshape.h" />
+    <ClInclude Include="kCompoundshapeBuilder.h" />
+    <ClInclude Include="kRectangle.h" />
+    <ClInclude Include="kRound.h" />
+    <ClInclude Include="kShape.h" />
+    <ClInclude Include="kShapeFactory.h" />
+    <ClInclude Include="kSquare.h" />
+    <ClInclude Include="kTrapezium.h" />
+    <ClInclude Include="kTriangle.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Compoundshape.cpp" />
-    <ClCompile Include="CompoundshapeBuilder.cpp" />
+    <ClCompile Include="kCompoundshape.cpp" />
+    <ClCompile Include="kCompoundshapeBuilder.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Round.cpp" />
-    <ClCompile Include="ShapeFactory.cpp" />
-    <ClCompile Include="Square.cpp" />
-    <ClCompile Include="Trapezium.cpp" />
-    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="kRectangle.cpp" />
+    <ClCompile Include="kRound.cpp" />
+    <ClCompile Include="kShapeFactory.cpp" />
+    <ClCompile Include="kSquare.cpp" />
+    <ClCompile Include="kTrapezium.cpp" />
+    <ClCompile Include="kTriangle.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

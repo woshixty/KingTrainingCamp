@@ -17,14 +17,40 @@ namespace KTestMatrixVector
 	TEST_CLASS(KTestMatrixVector)
 	{
 	public:
-		KMatrixBuilder<double>* builder = new KMatrixBuilder<double>(3, 4);
+		KMatrixBuilder<int>* builder = new KMatrixBuilder<int>(3, 4);
 		TEST_METHOD(multiply)
 		{
-			// ≤‚ ‘æÿ’Û≥À∑®==
+			// ≤‚ ‘æÿ’Û≥À∑®∫Õ==
 			KMatrixVector<int> matrix1(4, 1, 1);
 			KMatrixVector<int> matrix2(1, 4, 1);
 			KMatrixVector<int> right(1, 1, 4);
 			bool result = right == matrix2 * matrix1;
+			Assert::AreEqual(true, result);
+		}
+
+		TEST_METHOD(addAndMinus)
+		{
+			// ≤‚ ‘æÿ’Ûº”∑®ºı∑®Ω®‘Ï’ﬂ
+			KMatrixBuilder<int>* builder = new KMatrixBuilder<int>(3, 4);
+			KMatrixVector<int> matrix1 = builder->buildVectorMatrix(0, 0, 5)
+				->buildVectorMatrix(2, 2, 2)
+				->getVectorMatrix();
+			KMatrixVector<int> matrix2(3, 4, 1);
+			KMatrixVector<int> matrix3(3, 4, 1);
+			KMatrixVector<int> right(3, 4);
+			right.setData(0, 0, 5);
+			right.setData(2, 2, 2);
+			bool result = right == matrix1 + matrix2 - matrix3;
+			Assert::AreEqual(true, result);
+		}
+
+		TEST_METHOD(transpose)
+		{
+			// ≤‚ ‘◊™÷√
+			int arr[4] = { 1, 2, 3, 4 };
+			KMatrixVector<int> matrix1(4, 1, arr);
+			KMatrixVector<int> matrix2(1, 4, arr);
+			bool result = matrix1 == matrix2.transpose();
 			Assert::AreEqual(true, result);
 		}
 

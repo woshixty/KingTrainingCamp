@@ -8,22 +8,22 @@
 #ifndef CPPDESIGNPATTERNS_COMPOUNDSHAPE_H
 #define CPPDESIGNPATTERNS_COMPOUNDSHAPE_H
 
-#include "Shape.h"
-#include "Rectangle.h"
-#include "Triangle.h"
-#include "Trapezium.h"
-#include "Round.h"
-#include "Square.h"
+#include "kShape.h"
+#include "kRectangle.h"
+#include "kTriangle.h"
+#include "kTrapezium.h"
+#include "kRound.h"
+#include "kSquare.h"
 #include <vector>
 
-class Compoundshape : public Shape 
+class KCompoundshape : public KShape 
 {
 private:
-    std::vector<Shape*> shapes;
+    std::vector<KShape*> m_shapes;
 public:
-    ~Compoundshape();
+    ~KCompoundshape();
 
-    void addShape(Shape* shape);
+    void addShape(KShape* shape);
 
     double perimeter() const override;
 
@@ -31,35 +31,35 @@ public:
 
     ShapeType type() const override;
 
-    static Shape* copyShape(Shape* shape) 
+    static KShape* copyShape(KShape* shape) 
     {
         if (shape == nullptr) 
         {
             return nullptr;
         }
-        Shape* point;
+        KShape* point;
         switch (shape->type()) 
         {
         case rectangle:
-            point = new Rectangle(shape);
+            point = new KRectangle(shape);
             break;
         case circle:
-            point = new Round(shape);
+            point = new KRound(shape);
             break;
         case square:
-            point = new Square(shape);
+            point = new KSquare(shape);
             break;
         case trapezium:
-            point = new Trapezium(shape);
+            point = new KTrapezium(shape);
             break;
         case triangle:
-            point = new Triangle(shape);
+            point = new KTriangle(shape);
             break;
         case compoundshape:
-            point = new Compoundshape();
+            point = new KCompoundshape();
             break;
         default:
-            point = new Compoundshape();
+            point = new KCompoundshape();
         }
         return point;
     }

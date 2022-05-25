@@ -44,7 +44,7 @@ public:
     KMatrix<T>* getRightPointer(size_t row, size_t col) const override;
     void clear(size_t row, size_t col) override;
 
-    KMatrixMap<T>& operator=(KMatrixMap<T> const& other);
+    KMatrixMap<T> &operator=(KMatrixMap<T> const& other);
     KMatrixMap<T> operator+(KMatrixMap<T> const& other);
     KMatrixMap<T> operator-(KMatrixMap<T> const& other);
     KMatrixMap<T> operator*(KMatrixMap<T> const& other);
@@ -213,24 +213,30 @@ KMatrixMap<T>& KMatrixMap<T>::operator=(const KMatrixMap<T>& other)
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::operator+(const KMatrixMap<T>& other)
+KMatrixMap<T> KMatrixMap<T>::operator+(KMatrixMap<T> const &other)
 {
     auto* res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, addType));
-    return *res;
+    KMatrixMap<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
 KMatrixMap<T> KMatrixMap<T>::operator-(const KMatrixMap<T>& other)
 {
     auto* res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, minusType));
-    return *res;
+    KMatrixMap<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
 KMatrixMap<T> KMatrixMap<T>::operator*(const KMatrixMap<T>& other)
 {
     auto* res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, multiplyType));
-    return *res;
+    KMatrixMap<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
@@ -243,7 +249,9 @@ template<typename T>
 KMatrixMap<T> KMatrixMap<T>::transpose() const
 {
     auto* res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::transposeBase());
-    return *res;
+    KMatrixMap<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>

@@ -7,11 +7,11 @@
 // --------------------------------------------------------
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../KShape/Shape.h"
-#include "../KShape/Rectangle.h"
-#include "../KShape/ShapeFactory.h"
-#include "../KShape/Compoundshape.h"
-#include "../KShape/CompoundshapeBuilder.h"
+#include "../KShape/kShape.h"
+#include "../KShape/kRectangle.h"
+#include "../KShape/kShapeFactory.h"
+#include "../KShape/kCompoundshape.h"
+#include "../KShape/kCompoundshapeBuilder.h"
 #include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -24,16 +24,16 @@ namespace TestCompoundshape
 		// 测试面积
 		TEST_METHOD(TestArea)
 		{
-			CompoundshapeBuilder builder;
-			ShapeFactory factory;
+			KCompoundshapeBuilder builder;
+			KShapeFactory factory;
 			// 构造长方形
 			double l = 5, w = 6;
-			Shape* rec = factory.getRectangle(l, w);
+			KShape* rec = factory.getRectangle(l, w);
 			// 构造圆形
 			double r = 5;
-			Shape* rou = factory.getRound(r);
+			KShape* rou = factory.getRound(r);
 			// 构造复合形状
-			Shape* com = builder.build(rec)->build(rou)->getShape();
+			KShape* com = builder.build(rec)->build(rou)->getShape();
 			double expected = rec->area() + rou->area();
 			double res = com->area();
 			Assert::AreEqual(expected, res);
@@ -42,16 +42,16 @@ namespace TestCompoundshape
 		// 测试周长
 		TEST_METHOD(TestPerimeter)
 		{
-			CompoundshapeBuilder builder;
-			ShapeFactory factory;
+			KCompoundshapeBuilder builder;
+			KShapeFactory factory;
 			// 构造长方形
 			double l = 5, w = 6;
-			Shape* rec = factory.getRectangle(l, w);
+			KShape* rec = factory.getRectangle(l, w);
 			// 构造圆形
 			double r = 5;
-			Shape* rou = factory.getRound(r);
+			KShape* rou = factory.getRound(r);
 			// 构造复合形状
-			Shape* com = builder.build(rec)->build(rou)->getShape();
+			KShape* com = builder.build(rec)->build(rou)->getShape();
 			double expected = rec->perimeter() + rou->perimeter();
 			double res = com->perimeter();
 			Assert::AreEqual(expected, res);

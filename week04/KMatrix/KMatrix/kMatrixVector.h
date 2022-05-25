@@ -191,21 +191,27 @@ template<typename T>
 KMatrixVector<T> KMatrixVector<T>::operator+(const KMatrixVector<T>& other)
 {
     auto* res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, addType));
-    return *res;
+    KMatrixVector<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
 KMatrixVector<T> KMatrixVector<T>::operator-(const KMatrixVector<T>& other)
 {
     auto* res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, minusType));
-    return *res;
+    KMatrixVector<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
 KMatrixVector<T> KMatrixVector<T>::operator*(const KMatrixVector<T>& other)
 {
     auto* res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, multiplyType));
-    return *res;
+    KMatrixVector<T> result(*res);
+    delete res;
+    return result;
 }
 
 template<typename T>
@@ -218,7 +224,9 @@ template<typename T>
 KMatrixVector<T> KMatrixVector<T>::transpose() const
 {
     auto* res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::transposeBase());
-    return *res;
+    KMatrixVector<T> result(*res);
+    delete res;
+    return result;
 }
 
 

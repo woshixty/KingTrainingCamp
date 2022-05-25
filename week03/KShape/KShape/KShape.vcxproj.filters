@@ -15,60 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shape.h">
+    <ClInclude Include="kShape.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Triangle.h">
+    <ClInclude Include="kTriangle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Trapezium.h">
+    <ClInclude Include="kTrapezium.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Square.h">
+    <ClInclude Include="kSquare.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Round.h">
+    <ClInclude Include="kRound.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="kRectangle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Compoundshape.h">
+    <ClInclude Include="kCompoundshape.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CompoundshapeBuilder.h">
+    <ClInclude Include="kCompoundshapeBuilder.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ShapeFactory.h">
+    <ClInclude Include="kShapeFactory.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Compoundshape.cpp">
+    <ClCompile Include="kCompoundshape.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CompoundshapeBuilder.cpp">
+    <ClCompile Include="kCompoundshapeBuilder.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
+    <ClCompile Include="kRectangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Round.cpp">
+    <ClCompile Include="kRound.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ShapeFactory.cpp">
+    <ClCompile Include="kShapeFactory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Square.cpp">
+    <ClCompile Include="kSquare.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Trapezium.cpp">
+    <ClCompile Include="kTrapezium.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Triangle.cpp">
+    <ClCompile Include="kTriangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

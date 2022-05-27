@@ -78,13 +78,13 @@ void computing(char n, QStack<double> &operand)
         operand.push(b / a);
 }
 
-double computeExpressing(string str)
+QString computeExpressing(string str)
 {
     QStack<char> operatorStack;
     QStack<double> operandStack;
     bool flag = false;
     double currValue = 0;
-    for (int i = 0; i < str.size(); ++i)
+    for (size_t i = 0; i < str.size(); ++i)
     {
         if ('0' <= str.at(i) && str.at(i) <= '9')
         {
@@ -136,7 +136,7 @@ double computeExpressing(string str)
         computing(operatorStack.top(), operandStack);
         operatorStack.pop();
     }
-    return operandStack.top();
+    return QString("%4").arg(operandStack.top());
 }
 
 

@@ -36,8 +36,6 @@ private slots:
 
     void on_m_value_0_clicked();
 
-    void on_m_button_ce_clicked();
-
     void on_m_button_add_clicked();
 
     void on_m_button_minus_clicked();
@@ -48,8 +46,18 @@ private slots:
 
     void on_m_equal_clicked();
 
+    void on_m_left_bracket_clicked();
+
+    void on_m_clear_clicked();
+
+    void on_m_button_backstep_clicked();
+
+    void on_m_right_bracket_clicked();
+
 private:
     Ui::MainWindow *ui;
+    size_t m_left_brackets = 0;
+    size_t m_right_brackets = 0;
 };
 
 #endif // MAINWINDOW_H

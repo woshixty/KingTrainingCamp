@@ -1,7 +1,15 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+// -------------------------------------------------------
+// mainwindow.h
+// 创建者： xie tingyu
+// 创建时间： 2022/5/27
+// 功能描述： 主窗口函数，程序入口
+// Copyright 2013 Kingsoft
+// --------------------------------------------------------
+#ifndef _WEEK05_MAINWINDOW_H_
+#define _WEEK05_MAINWINDOW_H_
 
 #include <QMainWindow>
+#include "kcalculatetool.h"
 
 namespace Ui {
 class MainWindow;
@@ -58,8 +66,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    KCalculateTool *tool;
     size_t m_left_brackets = 0;
     size_t m_right_brackets = 0;
 };
 
-#endif // MAINWINDOW_H
+#endif // _WEEK05_MAINWINDOW_H_

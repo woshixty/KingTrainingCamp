@@ -1,20 +1,45 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+// -------------------------------------------------------
+// mainwindow.cpp
+// 创建者： xie tingyu
+// 创建时间： 2022/5/27
+// 功能描述： 主窗口，实现基础的表达式运算功能
+// Copyright 2013 Kingsoft
+// --------------------------------------------------------
 #include <QString>
 #include <QMessageBox>
-#include "ktools.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include "kconvertwindow.h"
+#include "kcalculatetool.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    tool = new KCalculateTool();
 }
 
 MainWindow::~MainWindow()
 {
+    delete tool;
     delete ui;
+}
+
+/**
+ * @brief handleOperator
+ * @param line
+ * @param ope
+ * @param parent
+ * 添加运算符并及进行相关检查，不允许连续的运算符
+ */
+void handleOperator(QLineEdit *line, QString ope, QMainWindow *parent)
+{
+    QString str = line->text();
+    if(str.endsWith("+") || str.endsWith("-") || str.endsWith("/") || str.endsWith("*"))
+        QMessageBox::critical (parent, "错误信息", "运算符冗余！");
+    else
+        line->insert(ope);
 }
 
 void MainWindow::on_m_value_0_clicked()
@@ -98,7 +123,7 @@ void MainWindow::on_m_equal_clicked()
         QMessageBox::critical(this, "错误信息", "左右括号数量不等！");
         return;
     }
-    QString res = computeExpressing(str.toStdString());
+    QString res = tool->computeExpressing(str.toStdString());
     ui->m_answer->setText(res);
 }
 

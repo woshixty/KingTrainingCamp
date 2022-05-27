@@ -1,3 +1,10 @@
+// -------------------------------------------------------
+// kconvertwindow.h
+// 创建者： xie tingyu
+// 创建时间： 2022/5/27
+// 功能描述： 提供进制转换的窗口类
+// Copyright 2013 Kingsoft
+// --------------------------------------------------------
 #ifndef KCONVERTWINDOW_H
 #define KCONVERTWINDOW_H
 

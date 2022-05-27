@@ -38,6 +38,16 @@ private slots:
 
     void on_m_button_ce_clicked();
 
+    void on_m_button_add_clicked();
+
+    void on_m_button_minus_clicked();
+
+    void on_m_button_multiply_clicked();
+
+    void on_m_button_divide_clicked();
+
+    void on_m_equal_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "QString"
+#include <QString>
+#include "ktools.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -68,4 +69,31 @@ void MainWindow::on_m_value_9_clicked()
 void MainWindow::on_m_button_ce_clicked()
 {
     ui->m_expression->backspace();
+}
+
+void MainWindow::on_m_button_add_clicked()
+{
+    handleOperator(ui->m_expression, "+", this);
+}
+
+void MainWindow::on_m_button_minus_clicked()
+{
+    handleOperator(ui->m_expression, "-", this);
+}
+
+void MainWindow::on_m_button_multiply_clicked()
+{
+    handleOperator(ui->m_expression, "*", this);
+}
+
+void MainWindow::on_m_button_divide_clicked()
+{
+    handleOperator(ui->m_expression, "/", this);
+}
+
+void MainWindow::on_m_equal_clicked()
+{
+    double res = computeExpressing(ui->m_expression->text().toStdString());
+    QString str = QString("%4").arg(res);
+    ui->m_answer->setText(str);
 }

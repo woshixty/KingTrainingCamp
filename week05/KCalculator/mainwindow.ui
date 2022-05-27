@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>761</width>
-    <height>695</height>
+    <width>703</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -219,6 +219,15 @@
       <property name="text">
        <string>6</string>
       </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
     </item>
     <item row="2" column="3">
@@ -302,7 +311,7 @@
      </widget>
     </item>
     <item row="4" column="2">
-     <widget class="QPushButton" name="pushButton_15">
+     <widget class="QPushButton" name="m_equal">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -366,7 +375,7 @@
        </font>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -377,7 +386,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>761</width>
+     <width>703</width>
      <height>26</height>
     </rect>
    </property>

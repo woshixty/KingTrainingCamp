@@ -25,11 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    kconvertwindow.cpp
 
 HEADERS += \
         mainwindow.h \
-    ktools.h
+    ktools.h \
+    kconvertwindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    kconvertwindow.ui

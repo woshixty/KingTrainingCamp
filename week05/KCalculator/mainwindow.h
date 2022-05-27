@@ -54,6 +54,8 @@ private slots:
 
     void on_m_right_bracket_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     size_t m_left_brackets = 0;

@@ -3,6 +3,7 @@
 #include <QString>
 #include <QMessageBox>
 #include "ktools.h"
+#include "kconvertwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -134,4 +135,10 @@ void MainWindow::on_m_right_bracket_clicked()
     }
     m_right_brackets++;
     ui->m_expression->insert(")");
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    KConvertWindow* window = new KConvertWindow();
+    window->show();
 }

@@ -80,13 +80,17 @@ private slots:
 
 private:
     Ui::kConvertWindow *ui;
+    // 点击相应进制后进行初始化，例如点击二进制radioButton就只能点击1、0数字按钮
     void initHEX(bool flag);
     void initDEC(bool flag);
     void initOCT(bool flag);
     void initBIN(bool flag);
     void keepOnAll(bool flag);
+    // 获取当前进制
     BaseType getTheRadio();
+    // 获取当前QLineEdit指针
     QLineEdit *getLineEdit();
+    // 向相应的QLineEdit写入数据
     void writeLineEdit(QString str);
 };
 

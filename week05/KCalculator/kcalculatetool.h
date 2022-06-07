@@ -15,12 +15,13 @@ class KCalculateTool
 {
 public:
     using string = std::string;
-
     KCalculateTool();
     ~KCalculateTool();
+    // 对外提供的表达式计算方法
     QString computeExpressing(string str);
 
 private:
+    // 计算栈顶两个操作数
     void computing(char n, QStack<double> &operand);
     int out_operator(char ope);
     int in_operator(char ope);

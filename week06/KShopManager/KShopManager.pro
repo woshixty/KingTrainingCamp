@@ -39,7 +39,8 @@ SOURCES += \
     dao/kuserdao.cpp \
     service/kproductservice.cpp \
     test/kproductdaotest.cpp \
-    windows/kproductsellwindows.cpp
+    windows/kproductsellwindows.cpp \
+    kprofileeditdialog.cpp
 
 HEADERS += \
     delegate/kcategorydelegate.h \
@@ -59,11 +60,13 @@ HEADERS += \
     entity/kuserentity.h \
     service/kproductservice.h \
     test/kproductdaotest.h \
-    windows/kproductsellwindows.h
+    windows/kproductsellwindows.h \
+    kprofileeditdialog.h
 
 FORMS += \
         mainwindow.ui \
     windows/kenterpagewindow.ui \
     windows/kloginwindow.ui \
     windows/kproductmanagerwindow.ui \
-    windows/kproductsellwindows.ui
+    windows/kproductsellwindows.ui \
+    kprofileeditdialog.ui
